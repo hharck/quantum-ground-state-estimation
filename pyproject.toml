@@ -1,0 +1,43 @@
+[project]
+name = "qgee"
+version = "0.1.0"
+description = "Quantum ground energy estimation"
+readme = "README.md"
+authors = [
+    { name = "Jakob Cetti Hansen", email = "jkbch@coga.io" },
+    { name = "Pijus Petkevičius", email = "pijus.petkevicius314@gmail.com" },
+    { name = "Hans Harck Tønning", email = "hans@hansht.dk" },
+    { name = "Miranda Speyer-Larsen", email = "mirandaspeyerlarsen@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pylatexenc>=2.11",
+    "pyzx>=0.10.6",
+    "qdk[qiskit]==1.32.3",  # pinned: utils/magne.py uses qdk private internals
+    "pyscf>=2.14.0",
+    "qiskit>=2.5.2",
+    "qiskit-addon-sqd>=0.13.1",
+    "qiskit-addon-utils>=0.4.0",
+    "qiskit-aer>=0.17.2",
+    "qiskit-ibm-runtime>=0.50.0",
+    "qiskit-nature>=0.8.0",
+    "qsharp-widgets==1.32.3",
+    "scipy>=1.18.1",
+    "tqdm>=4.70.1",
+    "pandas>=3.0.6",
+    "ase>=3.29.0",
+    "tblite>=0.7.0",
+]
+
+[project.scripts]
+mqs-prep = "qgee:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = ["qgee", "qpe", "utils", "QSE"]

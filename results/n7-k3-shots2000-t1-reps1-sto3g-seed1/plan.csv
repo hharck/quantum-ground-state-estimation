@@ -1,0 +1,3 @@
+molecule,prep,readout,backend,n,k,shots,time,qubits,depth,cz,status,phi_est,phi_true,error,tvd,energy_est,energy_exact,seconds,p,e_ref,compile_seconds
+BeH2,default,iqft,aer,7,3,2000,1.0,21,7350377,1962455,planned,,,,,,,,,,46.35
+BeH2,dpss,iqft,aer,7,3,2000,1.0,21,7350377,1962532,planned,,,,,,,,,,46.85
