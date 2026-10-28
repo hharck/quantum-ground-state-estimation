@@ -33,6 +33,7 @@ class QiskitBackend:
             
         self.preset_manager = generate_preset_pass_manager(backend=self.backend, optimization_level=3, seed_transpiler=1)
 
+    # Sample parameters based on https://quantum.cloud.ibm.com/learning/en/courses/quantum-diagonalization-algorithms/krylov#22-time-scaling-with-matrix-dimension
     @property
     def options(self):
         num_randomizations = 300
